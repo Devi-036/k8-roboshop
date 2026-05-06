@@ -25,7 +25,7 @@ metadata:
 type: Opaque
 data:
   AMQP_USER: "cm9ib3Nob3A="
-  AMQP_PASS: "Um9ib3Nob3BAMQ=="
+  AMQP_PASS: "cm9ib3Nob3AxMjM="
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -55,7 +55,7 @@ spec:
     spec:
       containers:
       - name: payment
-        image: devi036/payment:v1
+        image: joindevops/payment:v1
         envFrom:
         - configMapRef:
             name: payment
