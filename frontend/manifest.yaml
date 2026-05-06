@@ -38,8 +38,8 @@ data:
         include /etc/nginx/conf.d/*.conf;
 
         server {
-            listen       80;
-            listen       [::]:80;
+            listen       8080;
+            listen       [::]:8080;
             server_name  _;
             root         /usr/share/nginx/html;
 
@@ -100,7 +100,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: devi036/frontend:v1
+        image: joindevops/frontend:v1
         volumeMounts:
         - name: nginx-conf
           mountPath: /etc/nginx/nginx.conf
